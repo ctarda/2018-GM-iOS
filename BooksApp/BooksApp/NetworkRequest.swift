@@ -35,7 +35,8 @@ struct NetworkRequest {
                 title: googleBook.volumeInfo.title,
                 subtitle: googleBook.volumeInfo.subtitle ?? "",
                 author: googleBook.volumeInfo.authors?.first ?? "",
-                extendedDescription: googleBook.volumeInfo.description ?? ""
+                extendedDescription: googleBook.volumeInfo.description ?? "",
+                thumbnail: googleBook.volumeInfo.imageLinks?.smallThumbnail ?? ""
             )
         }
     }
