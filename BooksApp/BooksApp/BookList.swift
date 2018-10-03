@@ -108,7 +108,7 @@ class BookList: UITableViewController, UISearchResultsUpdating {
     }
 
     func updateSearchResults(for searchController: UISearchController) {
-        if let searchTerm = searchController.searchBar.text {
+        if let searchTerm = searchController.searchBar.text, searchTerm.isEmpty == false {
             scheduler.debounce { [weak self] in
                 self?.search(term: searchTerm)
             }
